@@ -22,8 +22,8 @@ namespace HotelReservationSystem
         /// <summary>
         /// Constructor of custom exception inheriting from Exception class
         /// </summary>
-        /// <param name="type"></param>
-        /// <param name="message"></param>
+        /// <param name="type">Exception Type</param>
+        /// <param name="message">Message to be printed in case of Exception</param>
         public HotelException(ExceptionType type, string message) : base(message)
         {
             this.type = type;
