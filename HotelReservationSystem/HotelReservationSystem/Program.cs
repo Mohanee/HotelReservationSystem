@@ -6,12 +6,12 @@ namespace HotelReservationSystem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Hotel Reservation System\n\n");
+            Console.WriteLine("Welcome to Hotel Reservation System\n");
             HotelManager manager = new HotelManager();
             bool val = true;
             while (val)
             {
-                Console.WriteLine("Choose among the following option\n1.Add Hotel\n2.Display Hotel\n3.Exit");
+                Console.WriteLine("Choose among the following option\n1.Add Hotel\n2.Display Hotel\n3.Exit\n4.Find Cheapest Hotel");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
@@ -35,12 +35,20 @@ namespace HotelReservationSystem
                             break;
                         }
 
+                    case 4:
+                        {
+                            Console.WriteLine("Enter the startDate");
+                            DateTime startDate = Convert.ToDateTime(Console.ReadLine());
+                            Console.WriteLine("Enter the endDate");
+                            DateTime endDate = Convert.ToDateTime(Console.ReadLine());
+                            Hotel cheapHotel= manager.FindCheapHotel(startDate, endDate);
+                            Console.WriteLine("Cheapest Hotel will be: " + cheapHotel.hotelName+"\n");
+                                break;
+                        }
+
                     default: break;
                 }
             }
-
-
-        
         }
     }
 }
