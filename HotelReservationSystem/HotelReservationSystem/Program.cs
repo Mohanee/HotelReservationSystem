@@ -40,9 +40,9 @@ namespace HotelReservationSystem
 
                     case 4:     ////Take CustomerType,startDate and endDate inputs from user and call findCheapHotel method(NO ratings)
                         {
-                            Console.WriteLine("Enter 1 for Reward Customer and 0 for Regular Customer");
-                            int type = Convert.ToInt32(Console.ReadLine());
-                            if (type != 0 || type != 1)
+                            Console.WriteLine("Enter Customer Type");
+                            string type = Console.ReadLine();
+                            if (manager.ValidateCustomerType(type))
                             {
                                 throw new HotelException(HotelException.ExceptionType.INVALID_CUSTOMER_TYPE, "Invalid Customer Type");
                             }
@@ -71,9 +71,9 @@ namespace HotelReservationSystem
 
                     case 6:    ////Take CustomerType,startDate and endDate inputs from user and call findCheapHotel method(considering ratings)
                         {
-                            Console.WriteLine("Enter 1 for Reward Customer and 0 for Regular Customer");
-                            int type = Convert.ToInt32(Console.ReadLine());
-                            if(type!=0 || type!=1)
+                            Console.WriteLine("Enter Customer Type");
+                            string type = Console.ReadLine();
+                            if(manager.ValidateCustomerType(type))
                             {
                                 throw new HotelException(HotelException.ExceptionType.INVALID_CUSTOMER_TYPE, "Invalid Customer Type");
                             }

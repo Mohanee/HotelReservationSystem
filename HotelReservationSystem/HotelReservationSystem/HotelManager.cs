@@ -164,5 +164,14 @@ namespace HotelReservationSystem
         {
             return (Regex.IsMatch(customerType,rewardCustomerRegex) || Regex.IsMatch(customerType,regularCustomerRegex));
         }
+
+
+        //public bool ContentEquals<TKey, TValue>(Dictionary<TKey, TValue> dictionary, Dictionary<TKey, TValue> otherDictionary)
+        //{
+        //    return (otherDictionary ?? new Dictionary<TKey, TValue>())
+        //        .OrderBy(kvp => kvp.Key)
+        //        .SequenceEqual((dictionary ?? new Dictionary<TKey, TValue>())
+        //                           .OrderBy(kvp => kvp.Key));
+        //}
     }
 }
