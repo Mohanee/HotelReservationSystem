@@ -15,9 +15,10 @@ namespace HotelReservationSystem
 
         public void DisplayHotels()
         {
+            Console.WriteLine("Name\tWeekday Rate\tWeekend Rate");
             foreach (var hotel in hotelList)
             {
-                Console.WriteLine(hotel.hotelName + "\t" + hotel.rateOfRegularCustomer);
+                Console.WriteLine(hotel.hotelName + "\t" + hotel.weekdayRate+"\t"+hotel.weekendRate);
             }
         }
     }

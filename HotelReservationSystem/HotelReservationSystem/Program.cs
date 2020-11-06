@@ -11,15 +11,15 @@ namespace HotelReservationSystem
             bool val = true;
             while (val)
             {
-                Console.WriteLine("Choose among the following option\n1.Add Hotel\t2.Display Hotel\t3.Exit");
+                Console.WriteLine("Choose among the following option\n1.Add Hotel\n2.Display Hotel\n3.Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
                 {
                     case 1:
                         {
-                            manager.AddHotel(new Hotel("Bridgewood", 160));
-                            manager.AddHotel(new Hotel("Ridgewood", 220));
-                            manager.AddHotel(new Hotel("Lakewood", 110));
+                            manager.AddHotel(new Hotel("Bridgewood", 160, 100));
+                            manager.AddHotel(new Hotel("Ridgewood", 220, 180));
+                            manager.AddHotel(new Hotel("Lakewood", 110, 80));
                             break;
                         }
 
